@@ -66,7 +66,7 @@ void readFromFile(struct employee* head){
         // Allocate and assign memory for the new node
         newNode = (struct employee*)malloc(sizeof(struct employee));
         
-        // Get data for new node from user
+        // Get data for new node from file
         temp->id = id;
         strcpy( temp->firstName, firstName );
         strcpy( temp->lastName, lastName );

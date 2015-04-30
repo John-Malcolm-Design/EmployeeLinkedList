@@ -20,6 +20,13 @@ struct date{
     int year;
 };
 
+// Login Struct
+struct login{
+    char username[20];
+    char password[30];
+    struct login *next;
+};
+
 // Address Struct
 struct address{
     char street[40];
@@ -27,7 +34,7 @@ struct address{
     char country[30];
 };
 
-// Address Struct
+// Report Struct
 struct report{
     char departmentName[20];
     int numberOfEmployees;
@@ -36,7 +43,7 @@ struct report{
     int financialOutlay;
 };
 
-// Node Struct
+// Employee Struct
 struct employee{
     int id;
     char firstName[20];
@@ -58,5 +65,7 @@ void deleteEmployee();
 void sortList();
 void swap();
 void writeToFile();
+int searchUser();
+void login();
 
 #endif

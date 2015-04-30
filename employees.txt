@@ -6,3 +6,4 @@
 6 Mitch Flanagan richymitch@btinternet.com 3_Sea_Drive_Salt_Hill Galway Ireland Legal 19 2 1992 31000
 7 Megan McGuinness hi@johnmalcolmdesign.com 32_Millview_Crescent Ballina Ireland Sales 20 1 1993 120000
 8 Sarah Carter sarahcarter@btinternet.co.uk 3_Hawthorn_St Clarinbridge Ireland IT 22 11 1992 92000
+9 Jimmy McGee hi@johnmalcolmdesign.com 132_Wilking_St Ballinrobe Ireland HR 20 12 1997 54444

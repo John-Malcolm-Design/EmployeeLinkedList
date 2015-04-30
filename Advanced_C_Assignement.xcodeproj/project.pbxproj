@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F320BF21AE551ED009F6481 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F320BF11AE551ED009F6481 /* main.c */; };
 		1F4541F11AF2C96B002E7E20 /* writeToFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F4541F01AF2C96B002E7E20 /* writeToFile.c */; };
+		1F4541F31AF2D755002E7E20 /* searchUser.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F4541F21AF2D755002E7E20 /* searchUser.c */; };
+		1F4541F51AF2DB7D002E7E20 /* login.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F4541F41AF2DB7D002E7E20 /* login.c */; };
 		1FEB53821AE59785000D0B0D /* sortList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53811AE59785000D0B0D /* sortList.c */; };
 		1FEB53841AE597CA000D0B0D /* menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53831AE597CA000D0B0D /* menu.c */; };
 		1FEB53861AE597F1000D0B0D /* deleteEmployee.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53851AE597F1000D0B0D /* deleteEmployee.c */; };
@@ -35,6 +37,8 @@
 		1F320BEE1AE551ED009F6481 /* Advanced_C_Assignement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Advanced_C_Assignement; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F320BF11AE551ED009F6481 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		1F4541F01AF2C96B002E7E20 /* writeToFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = writeToFile.c; sourceTree = "<group>"; };
+		1F4541F21AF2D755002E7E20 /* searchUser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = searchUser.c; sourceTree = "<group>"; };
+		1F4541F41AF2DB7D002E7E20 /* login.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = login.c; sourceTree = "<group>"; };
 		1FEB53801AE59607000D0B0D /* customHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customHeader.h; sourceTree = "<group>"; };
 		1FEB53811AE59785000D0B0D /* sortList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sortList.c; sourceTree = "<group>"; };
 		1FEB53831AE597CA000D0B0D /* menu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = menu.c; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				1FEB53931AE59A09000D0B0D /* swap.c */,
 				1FEB53971AE5B123000D0B0D /* readFromFile.c */,
 				1F4541F01AF2C96B002E7E20 /* writeToFile.c */,
+				1F4541F21AF2D755002E7E20 /* searchUser.c */,
+				1F4541F41AF2DB7D002E7E20 /* login.c */,
 			);
 			path = Advanced_C_Assignement;
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 				1FEB538E1AE599A2000D0B0D /* addEmployee.c in Sources */,
 				1FEB53841AE597CA000D0B0D /* menu.c in Sources */,
 				1F4541F11AF2C96B002E7E20 /* writeToFile.c in Sources */,
+				1F4541F51AF2DB7D002E7E20 /* login.c in Sources */,
+				1F4541F31AF2D755002E7E20 /* searchUser.c in Sources */,
 				1FEB53941AE59A09000D0B0D /* swap.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

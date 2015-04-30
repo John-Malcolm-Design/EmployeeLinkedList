@@ -10,6 +10,9 @@
 
 int main(int argc, const char * argv[]) {
     
+    // Calls Login function
+    login();
+    
     // Node initialization & Memory allocation
     struct employee *head = NULL;
     head = (struct employee*)malloc(sizeof(struct employee));
@@ -19,5 +22,5 @@ int main(int argc, const char * argv[]) {
     
     // Displays the menu
     menu(head);
-
+    
 }
