@@ -1,5 +1,5 @@
 //
-//  addToEnd.c
+//  addEmployee.c
 //  Advanced_C_Assignement
 //
 //  Created by John Malcolm Anderson on 20/04/2015.
@@ -9,18 +9,9 @@
 #include "customHeader.h"
 
 // Allows the user to add a node to the end of the list
-void addToEnd(struct employee* head) {
+void addEmployee(struct employee* head) {
     
     int id = 0;
-//    char firstName[255];
-//    char lastName[255];
-//    char email[255];
-//    char street[255];
-//    char city[255];
-//    char country[255];
-//    char department[255];
-//    int date;
-//    int salary;
     
     // Creates a pointer to a new node
     struct employee *temp;
@@ -75,12 +66,23 @@ void addToEnd(struct employee* head) {
     scanf("%s", &temp->empAddress.country);
     
     // Department
-    printf("Enter department: ");
+    printf("Enter department (Either: Sales, IT, Legal or HR) : ");
     scanf("%s", &temp->department);
     
     // Date
-    printf("Enter Date: (DDMMYYYY - Numbers Only!)");
-    scanf("%d", &temp->date);
+    printf("Enter Start Date:\n");
+    
+    // Day
+    printf("Day: (DD)");
+    scanf("%d", &temp->date.date);
+    
+    // Month
+    printf("Month: (MM)");
+    scanf("%d", &temp->date.month);
+    
+    // Year
+    printf("Year: (YYYY)");
+    scanf("%d", &temp->date.year);
     
     // Salary
     printf("Enter Salary: ");
@@ -94,4 +96,7 @@ void addToEnd(struct employee* head) {
     
     // Sets next to newNode/
     temp->next = newNode ;
+    
+    writeToFile(head);
+
 };

@@ -21,13 +21,15 @@ void readFromFile(struct employee* head){
     char country[255];
     char department[255];
     int date;
+    int month;
+    int year;
     int salary;
     
     // File Pointer
     FILE *fp;
     
     // Open File for Reading & Writing
-    fp = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/employees_db.txt", "r+");
+    fp = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/employees.txt", "r+");
     
     // Reads in 'line by line' until we reach the end of the file (EOF)
     while (fscanf(fp, "%d", &id) != EOF) {
@@ -39,6 +41,8 @@ void readFromFile(struct employee* head){
         fscanf(fp, "%s", country);
         fscanf(fp, "%s", department);
         fscanf(fp, "%d", &date);
+        fscanf(fp, "%d", &month);
+        fscanf(fp, "%d", &year);
         fscanf(fp, "%d", &salary);
         
         // Creates a pointer to a new node
@@ -71,7 +75,9 @@ void readFromFile(struct employee* head){
         strcpy( temp->empAddress.city, city );
         strcpy( temp->empAddress.country, country);
         strcpy( temp->department, department);
-        temp->date = date;
+        temp->date.date = date;
+        temp->date.month = month;
+        temp->date.year = year;
         temp->salary = salary;
         temp->next= NULL;
         

@@ -13,6 +13,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Date Struct
+struct date{
+    int month;
+    int date;
+    int year;
+};
+
 // Address Struct
 struct address{
     char street[40];
@@ -25,6 +32,8 @@ struct report{
     char departmentName[20];
     int numberOfEmployees;
     int totalSalary;
+    int totalBonus;
+    int financialOutlay;
 };
 
 // Node Struct
@@ -35,22 +44,19 @@ struct employee{
     char email[30];
     struct address empAddress;
     char department[20];
-    int date;
+    struct date date;
     int salary;
     struct employee *next;
 };
 
 // Function Declarations
-void addToStart();
-void addToEnd();
+void addEmployee();
 void menu();
 struct report* displayByDepartment();
-void searchList();
-struct employee* searchListReturn();
-void deleteFromStart();
-void deleteFromEnd();
+struct employee* searchEmployee();
+void deleteEmployee();
 void sortList();
 void swap();
-void updateEmployee();
+void writeToFile();
 
 #endif

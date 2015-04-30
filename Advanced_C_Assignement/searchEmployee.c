@@ -1,5 +1,5 @@
 //
-//  searchListReturn.c
+//  searchEmployee.c
 //  Advanced_C_Assignement
 //
 //  Created by John Malcolm Anderson on 20/04/2015.
@@ -9,7 +9,7 @@
 #include "customHeader.h"
 
 // Search list and return node
-struct employee * searchListReturn(struct employee *head, int num) {
+struct employee * searchEmployee(struct employee *head, int num) {
     
     // Creates a pointer to a new temporary node
     struct employee *temp;

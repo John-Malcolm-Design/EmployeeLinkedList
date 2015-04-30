@@ -1,5 +1,5 @@
 //
-//  deleteFromEnd.c
+//  deleteEmployee.c
 //  Advanced_C_Assignement
 //
 //  Created by John Malcolm Anderson on 20/04/2015.
@@ -8,7 +8,7 @@
 
 #include "customHeader.h"
 
-void deleteFromEnd(struct employee **head, int num){
+void deleteEmployee(struct employee **head, int num){
     
     // Creates a pointer to a new temporary node
     struct employee *temp;
@@ -38,9 +38,10 @@ void deleteFromEnd(struct employee **head, int num){
                 
                 return;
             }
-            printf("%s", temp->firstName);
+            printf("%s Deleted", temp->firstName);
             newNode->next = temp->next;
             free(temp);
+            
             return;
         }
         // Sets temp to the next node

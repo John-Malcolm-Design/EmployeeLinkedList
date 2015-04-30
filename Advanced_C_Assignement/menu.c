@@ -20,14 +20,12 @@ void menu(struct employee* head){
         // Displays the various choices the user has for manipulating the Linked List
         
         printf("\n** Please chose from the options below below **\n");
-        printf("1. Print Employees \n");
-        printf("2. Add Employee \n");
+        printf("1. Add Employee \n");
+        printf("2. Display Emplyee Details\n");
         printf("3. Update Employee \n");
         printf("4. Delete Employee \n");
-        printf("5. Search List and Return Employees \n");
-        printf("6. Delete Employee From Start \n");
-        printf("7. Delete Employee From End \n");
-        printf("8. Sort Employees List \n");
+        printf("5. Display All Employees By Department  \n");
+        printf("6. Employee Report \n");
         printf("-1. End Program \n\n");
         
         printf("Choice: ");
@@ -44,35 +42,34 @@ void menu(struct employee* head){
         // Runs the appropriate function based on the users choice
         switch (userChoice) {
             case 1:
-                printf("\n***** IT Department *****\n");
-                reportTemp = displayByDepartment(head, itDepartment);
-                printf("%d\n", reportTemp->totalSalary);
-                printf("%d\n", reportTemp->numberOfEmployees);
-                printf("%s", reportTemp->departmentName);
-                
-                printf("\n\n***** Sales Department *****\n");
-                reportTemp = displayByDepartment(head, salesDepartment);
-                
-                printf("\n\n***** Legal Department *****\n");
-                reportTemp = displayByDepartment(head, legalDepartment);
-                
-                printf("\n\n***** HR Department *****\n");
-                reportTemp = displayByDepartment(head, hrDepartment);
-
-                // Clears userChoice variable so the user can pick another option
+                addEmployee(head);
                 userChoice = NULL;
                 break;
+                
             case 2:
-                addToEnd(head);
+                printf("Enter ID of employee you would like to display: ");
+                scanf("%d", &userSearch);
+                
+                struct employee *temp;
+                temp = searchEmployee(head, userSearch);
+                if (temp) {
+                    printf("\nID: %d\nName: %s %s\nEmail: %s\nAddress: %s, %s, %s\nDepartment: %s\nDate: %d/%d/%d\nSalary: %d\n", temp->id, temp->firstName, temp->lastName, temp->email, temp->empAddress.street, temp->empAddress.city, temp->empAddress.country, temp->department, temp->date.date, temp->date.month, temp->date.year, temp->salary);
+                } else{
+                    printf("Employee not found!\n");
+                }
+                
+                // Reset variables
+                userSearch = NULL;
                 userChoice = NULL;
                 break;
+                
             case 3:
                 printf("Enter ID of employee you would like to update: ");
                 scanf("%d", &userSearch);
                 
                 int updateChoice;
                 struct employee *updateTemp;
-                updateTemp = searchListReturn(head, userSearch);
+                updateTemp = searchEmployee(head, userSearch);
                 
                 printf("What would you like to update?\n");
                 printf("1 = Address\n");
@@ -99,7 +96,7 @@ void menu(struct employee* head){
                             break;
                         case 2:
                             // Department
-                            printf("Enter department: ");
+                            printf("Enter department: (Either: Sales, IT, Legal or HR)");
                             scanf("%s", &updateTemp->department);
                             break;
                         case 3:
@@ -110,7 +107,8 @@ void menu(struct employee* head){
                         default:
                             break;
                     }
-
+                    writeToFile(head);
+                    
                 } else{
                     printf("Employee not found!\n");
                 }
@@ -119,44 +117,59 @@ void menu(struct employee* head){
                 userSearch = NULL;
                 userChoice = NULL;
                 break;
+                
             case 4:
                 printf("Enter id of employee you would like to delete: ");
                 scanf("%d", &userSearch);
-                // userSearch = userSearch + 0001;
-                deleteFromEnd(&head, userSearch);
+                deleteEmployee(&head, userSearch);
+                writeToFile(head);
                 // Reset variables
                 userSearch = NULL;
                 userChoice = NULL;
-                break;
-            case 5:
-                printf("Enter number to search list for: ");
-                scanf("%d", &userSearch);
-                
-                struct employee *temp;
-                temp = searchListReturn(head, userSearch);
-                if (temp) {
-                    printf("\nID: %d\nName: %s %s\nEmail: %s\nAddress: %s, %s, %s\nDepartment: %s\nDate: %d", temp->id, temp->firstName, temp->lastName, temp->email, temp->empAddress.street, temp->empAddress.city, temp->empAddress.country, temp->department, temp->date);
-                } else{
-                    printf("Employee not found!\n");
-                }
-                
-                // Reset variables
-                userSearch = NULL;
-                userChoice = NULL;
-                break;
-            case 6:
-                deleteFromStart(&head);
-                break;
-            case 7:
-                deleteFromEnd(head);
                 break;
             case 8:
                 sortList(head);
                 break;
+                
+            case 5:
+                printf("\n***** IT Department *****\n");
+                reportTemp = displayByDepartment(head, itDepartment, 0);
+                
+                printf("\n\n***** Sales Department *****\n");
+                reportTemp = displayByDepartment(head, salesDepartment, 0);
+                
+                printf("\n\n***** Legal Department *****\n");
+                reportTemp = displayByDepartment(head, legalDepartment, 0);
+                
+                printf("\n\n***** HR Department *****\n");
+                reportTemp = displayByDepartment(head, hrDepartment, 0);
+                
+                // Clears userChoice variable so the user can pick another option
+                userChoice = NULL;
+                break;
+                
+            case 6:
+                printf("\n***** IT Department *****\n");
+                reportTemp = displayByDepartment(head, itDepartment, 1);
+                
+                printf("\n\n***** Sales Department *****\n");
+                reportTemp = displayByDepartment(head, salesDepartment, 1);
+                
+                printf("\n\n***** Legal Department *****\n");
+                reportTemp = displayByDepartment(head, legalDepartment, 1);
+                
+                
+                printf("\n\n***** HR Department *****\n");
+                reportTemp = displayByDepartment(head, hrDepartment, 1);
+                
+                // Clears userChoice variable so the user can pick another option
+                userChoice = NULL;
+                break;
+                
             default:
                 break;
         }
     } while (userChoice != -1);
     // end of program
-
+    
 };
