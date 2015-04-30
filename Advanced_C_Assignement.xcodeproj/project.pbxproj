@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1F320BF21AE551ED009F6481 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1F320BF11AE551ED009F6481 /* main.c */; };
+		1FEB53821AE59785000D0B0D /* sortList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53811AE59785000D0B0D /* sortList.c */; };
+		1FEB53841AE597CA000D0B0D /* menu.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53831AE597CA000D0B0D /* menu.c */; };
+		1FEB53861AE597F1000D0B0D /* deleteFromEnd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53851AE597F1000D0B0D /* deleteFromEnd.c */; };
+		1FEB53881AE59812000D0B0D /* addToStart.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53871AE59812000D0B0D /* addToStart.c */; };
+		1FEB538C1AE59984000D0B0D /* printNodes.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB538B1AE59984000D0B0D /* printNodes.c */; };
+		1FEB538E1AE599A2000D0B0D /* addToEnd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB538D1AE599A2000D0B0D /* addToEnd.c */; };
+		1FEB53901AE599CE000D0B0D /* searchListReturn.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB538F1AE599CE000D0B0D /* searchListReturn.c */; };
+		1FEB53921AE599E9000D0B0D /* deleteFromStart.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53911AE599E9000D0B0D /* deleteFromStart.c */; };
+		1FEB53941AE59A09000D0B0D /* swap.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53931AE59A09000D0B0D /* swap.c */; };
+		1FEB53961AE5AB62000D0B0D /* searchList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53951AE5AB62000D0B0D /* searchList.c */; };
+		1FEB53981AE5B123000D0B0D /* readFromFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB53971AE5B123000D0B0D /* readFromFile.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,18 @@
 /* Begin PBXFileReference section */
 		1F320BEE1AE551ED009F6481 /* Advanced_C_Assignement */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Advanced_C_Assignement; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F320BF11AE551ED009F6481 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1FEB53801AE59607000D0B0D /* customHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customHeader.h; sourceTree = "<group>"; };
+		1FEB53811AE59785000D0B0D /* sortList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sortList.c; sourceTree = "<group>"; };
+		1FEB53831AE597CA000D0B0D /* menu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = menu.c; sourceTree = "<group>"; };
+		1FEB53851AE597F1000D0B0D /* deleteFromEnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deleteFromEnd.c; sourceTree = "<group>"; };
+		1FEB53871AE59812000D0B0D /* addToStart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = addToStart.c; sourceTree = "<group>"; };
+		1FEB538B1AE59984000D0B0D /* printNodes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = printNodes.c; sourceTree = "<group>"; };
+		1FEB538D1AE599A2000D0B0D /* addToEnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = addToEnd.c; sourceTree = "<group>"; };
+		1FEB538F1AE599CE000D0B0D /* searchListReturn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = searchListReturn.c; sourceTree = "<group>"; };
+		1FEB53911AE599E9000D0B0D /* deleteFromStart.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = deleteFromStart.c; sourceTree = "<group>"; };
+		1FEB53931AE59A09000D0B0D /* swap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swap.c; sourceTree = "<group>"; };
+		1FEB53951AE5AB62000D0B0D /* searchList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = searchList.c; sourceTree = "<group>"; };
+		1FEB53971AE5B123000D0B0D /* readFromFile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = readFromFile.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +80,19 @@
 		1F320BF01AE551ED009F6481 /* Advanced_C_Assignement */ = {
 			isa = PBXGroup;
 			children = (
+				1FEB53951AE5AB62000D0B0D /* searchList.c */,
 				1F320BF11AE551ED009F6481 /* main.c */,
+				1FEB53911AE599E9000D0B0D /* deleteFromStart.c */,
+				1FEB538D1AE599A2000D0B0D /* addToEnd.c */,
+				1FEB53871AE59812000D0B0D /* addToStart.c */,
+				1FEB53851AE597F1000D0B0D /* deleteFromEnd.c */,
+				1FEB538F1AE599CE000D0B0D /* searchListReturn.c */,
+				1FEB53801AE59607000D0B0D /* customHeader.h */,
+				1FEB53811AE59785000D0B0D /* sortList.c */,
+				1FEB53831AE597CA000D0B0D /* menu.c */,
+				1FEB538B1AE59984000D0B0D /* printNodes.c */,
+				1FEB53931AE59A09000D0B0D /* swap.c */,
+				1FEB53971AE5B123000D0B0D /* readFromFile.c */,
 			);
 			path = Advanced_C_Assignement;
 			sourceTree = "<group>";
@@ -118,7 +153,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEB538C1AE59984000D0B0D /* printNodes.c in Sources */,
 				1F320BF21AE551ED009F6481 /* main.c in Sources */,
+				1FEB53821AE59785000D0B0D /* sortList.c in Sources */,
+				1FEB53981AE5B123000D0B0D /* readFromFile.c in Sources */,
+				1FEB53961AE5AB62000D0B0D /* searchList.c in Sources */,
+				1FEB53901AE599CE000D0B0D /* searchListReturn.c in Sources */,
+				1FEB53861AE597F1000D0B0D /* deleteFromEnd.c in Sources */,
+				1FEB53881AE59812000D0B0D /* addToStart.c in Sources */,
+				1FEB538E1AE599A2000D0B0D /* addToEnd.c in Sources */,
+				1FEB53841AE597CA000D0B0D /* menu.c in Sources */,
+				1FEB53941AE59A09000D0B0D /* swap.c in Sources */,
+				1FEB53921AE599E9000D0B0D /* deleteFromStart.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +281,7 @@
 				1F320BF71AE551ED009F6481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
