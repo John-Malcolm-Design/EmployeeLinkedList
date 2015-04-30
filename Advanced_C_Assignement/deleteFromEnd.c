@@ -8,25 +8,48 @@
 
 #include "customHeader.h"
 
-void deleteFromEnd(struct employee *head){
+void deleteFromEnd(struct employee **head, int num){
     
-    struct employee *temp, *last;
+    // Creates a pointer to a new temporary node
+    struct employee *temp;
     
-    temp = (struct employee*)malloc(sizeof(struct employee));
+    // Allocate and assign memory for the new node
+    temp =(struct employee*)malloc(sizeof(struct employee));
     
-    temp = head;
-    last = temp;
+    // Sets temp = head
+    temp = *head;
     
-    while(temp->next != NULL && temp != NULL)
+    struct employee *newNode;
+    
+    newNode = temp;
+    int count = 0;
+    
+    // While the new temp node != NULL
+    while( temp!= NULL )
     {
-        last = temp;
+        // If new temp nodes data == item searching for print "Data Found."
+        if(temp->id == num) {
+            if (count == 0) {
+                newNode = *head;
+                
+                *head = newNode->next;
+                
+                free(newNode);
+                
+                return;
+            }
+            printf("%s", temp->firstName);
+            newNode->next = temp->next;
+            free(temp);
+            return;
+        }
+        // Sets temp to the next node
+        newNode = temp;
         temp = temp->next;
+        count++;
+        
     }
-    if (last == temp) {
-        free(temp);
-        head = NULL;
-    }else{
-        free(last->next);
-        last->next = NULL;
-    }
+    // IF data was not found prints "Data not found"
+    printf("\nData not found\n");
+    
 };

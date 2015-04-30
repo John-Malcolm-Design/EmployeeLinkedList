@@ -13,10 +13,18 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Address Struct
 struct address{
     char street[40];
     char city[30];
     char country[30];
+};
+
+// Address Struct
+struct report{
+    char departmentName[20];
+    int numberOfEmployees;
+    int totalSalary;
 };
 
 // Node Struct
@@ -36,12 +44,13 @@ struct employee{
 void addToStart();
 void addToEnd();
 void menu();
-void printNodes();
+struct report* displayByDepartment();
 void searchList();
 struct employee* searchListReturn();
 void deleteFromStart();
 void deleteFromEnd();
 void sortList();
 void swap();
+void updateEmployee();
 
 #endif
