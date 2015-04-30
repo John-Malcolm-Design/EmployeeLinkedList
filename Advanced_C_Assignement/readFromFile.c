@@ -41,8 +41,45 @@ void readFromFile(struct employee* head){
         fscanf(fp, "%d", &date);
         fscanf(fp, "%d", &salary);
         
+        // Creates a pointer to a new node
+        struct employee *temp;
         
-        printf("\nID: %d\nName: %s %s\nEmail: %s\nAddress: %s, %s, %s\nDepartment: %s\nDate: %d\nSalary: %d\n", id, firstName, lastName, email, street, city, country, department, date, salary);
+        // Allocate and assign memory for the new node
+        temp =(struct employee*)malloc(sizeof(struct employee));
+        
+        // Assigns contents of head to temp
+        temp = head;
+        
+        // While temps next node is not NULL
+        while(temp->next != NULL)
+        {
+            // Set temp to the next node
+            temp = temp->next;
+        }
+        // Creates a pointer to a new node
+        struct employee *newNode;
+        
+        // Allocate and assign memory for the new node
+        newNode = (struct employee*)malloc(sizeof(struct employee));
+        
+        // Get data for new node from user
+        temp->id = id;
+        strcpy( temp->firstName, firstName );
+        strcpy( temp->lastName, lastName );
+        strcpy( temp->email, email );
+        strcpy( temp->empAddress.street, street );
+        strcpy( temp->empAddress.city, city );
+        strcpy( temp->empAddress.country, country);
+        strcpy( temp->department, department);
+        temp->date = date;
+        temp->salary = salary;
+        temp->next= NULL;
+        
+        // Sets the next node to null for the new node as it is the last node in the list
+        newNode->next = NULL;
+        
+        // Sets next to newNode
+        temp->next = newNode;
     }
     
     fclose(fp);

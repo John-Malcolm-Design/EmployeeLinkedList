@@ -14,49 +14,14 @@
 int userChoice = NULL;
 int userSearch = NULL;
 
-void menu(){
-    
-    // Node initialization. Nodes to be included in the Linked List
-    struct employee *head = NULL;
-    struct employee *billy = NULL;
-    
-    // Allocated memory for both the first node(the one that head points to!) and the "billy" Node.
-    head = (struct employee*)malloc(sizeof(struct employee));
-    billy = (struct employee*)malloc(sizeof(struct employee));
-    
-    // Initialize data and next properties of the first Node.
-    // Accesed via head pointer
-    head->id = 0001;
-    strcpy( head->firstName, "John Malcolm" );
-    strcpy( head->lastName, "Anderson" );
-    strcpy( head->email, "hi@johnmalcolmdesign.com" );
-    strcpy( head->empAddress.street, "132 Ros Caoin, Roscam" );
-    strcpy( head->empAddress.city, "Galway" );
-    strcpy( head->empAddress.country, "Ireland" );
-    strcpy( head->department, "IT" );
-    head->date = 20042015;
-    head->salary = 60000;
-    head->next = billy;
-    
-    // Initialize data and next properties of the billy Node.
-    billy->id = 0002;
-    strcpy( billy->firstName, "Charles" );
-    strcpy( billy->lastName, "Mahony" );
-    strcpy( billy->email, "charlieboy12@yahoo.com" );
-    strcpy( billy->empAddress.street, "12 Newcastle Rd" );
-    strcpy( billy->empAddress.city, "Galway" );
-    strcpy( billy->empAddress.country, "Ireland");
-    strcpy( billy->department, "Sales");
-    billy->date = 12042019;
-    billy->salary = 50000;
-    billy->next= NULL;
+void menu(struct employee* head){
     
     do {
         // Displays the various choices the user has for manipulating the Linked List
         
         printf("\n** Please chose from the options below below **\n");
         printf("1. Print Employees \n");
-        printf("2. Add Employee to End \n");
+        printf("2. Add Employee \n");
         printf("3. Add Employees to Start \n");
         printf("4. Search List for Employees \n");
         printf("5. Search List and Return Employees \n");

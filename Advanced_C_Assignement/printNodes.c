@@ -20,9 +20,8 @@ void printNodes(struct employee* head){
     // Assigns contents of head to temp
     temp = head;
     
-    
     // This while loop will traverse the LinkedList using the next pointer and print out the 'data'
-    while( temp!= NULL ) {
+    while( temp->next!= NULL ) {
         
         // Print the data for the temp node
         printf("\nID: %d\nName: %s %s\nEmail: %s\nAddress: %s, %s, %s\nDepartment: %s\nDate: %d", temp->id, temp->firstName, temp->lastName, temp->email, temp->empAddress.street, temp->empAddress.city, temp->empAddress.country, temp->department, temp->date);
