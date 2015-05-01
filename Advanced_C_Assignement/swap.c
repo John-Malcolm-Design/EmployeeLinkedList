@@ -8,7 +8,7 @@
 
 #include "customHeader.h"
 
-/* function to swap data of two nodes a and b*/
+// function to swap data of two nodes a and b
 void swap(struct employee *a, struct employee *b)
 {
     int temp = a->id;

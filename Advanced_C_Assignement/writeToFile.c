@@ -10,21 +10,6 @@
 
 void writeToFile(struct employee* head){
     
-    // Variables for reading from file
-    int id;
-    int endOfFile;
-    char firstName[255];
-    char lastName[255];
-    char email[255];
-    char street[255];
-    char city[255];
-    char country[255];
-    char department[255];
-    int date;
-    int month;
-    int year;
-    int salary;
-    
     // File Pointer
     FILE *fp;
     
@@ -49,6 +34,6 @@ void writeToFile(struct employee* head){
         temp = temp->next;
     }
     
-    
+    // Closes file
     fclose(fp);
 }

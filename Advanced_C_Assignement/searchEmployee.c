@@ -8,7 +8,8 @@
 
 #include "customHeader.h"
 
-// Search list and return node
+// Search LinkedList for employee
+// Returns emplyee if found or NULL if not
 struct employee * searchEmployee(struct employee *head, int num) {
     
     // Creates a pointer to a new temporary node

@@ -8,34 +8,35 @@
 
 #include "customHeader.h"
 
-// Allows the user to add a node to the end of the list
+// Adds an employee to the LinkedList
 void addEmployee(struct employee* head) {
     
+    // Initializes Id
     int id = 0;
     
-    // Creates a pointer to a new node
+    // Creates a pointer to a new employee
     struct employee *temp;
     
-    // Allocate and assign memory for the new node
+    // Allocate and assign memory for the new employee
     temp =(struct employee*)malloc(sizeof(struct employee));
     
     // Assigns contents of head to temp
     temp = head;
     
-    // While temps next node is not NULL
+    // While temps next employee is not NULL
     while(temp->next != NULL)
     {
         id = temp->id;
-        // Set temp to the next node
+        // Set temp to the next employee
         temp = temp->next;
     }
     // Creates a pointer to a new node
     struct employee *newNode;
     
-    // Allocate and assign memory for the new node
+    // Allocate and assign memory for the new employee
     newNode = (struct employee*)malloc(sizeof(struct employee));
     
-    // Get data for new node from user
+    // Get data for new employee from user
     printf("\nEnter data for this node: \n");
     temp->id = ++id;
     
@@ -98,5 +99,5 @@ void addEmployee(struct employee* head) {
     temp->next = newNode ;
     
     writeToFile(head);
-
+    
 };

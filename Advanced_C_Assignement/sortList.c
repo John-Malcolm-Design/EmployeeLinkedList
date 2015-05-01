@@ -8,7 +8,7 @@
 
 #include "customHeader.h"
 
-/* Bubble sort the given linked lsit */
+// Bubble sort for emplyee LinkedList
 void sortList(struct employee *head)
 {
     int swapped, i;

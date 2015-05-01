@@ -13,13 +13,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Date Struct
-struct date{
-    int month;
-    int date;
-    int year;
-};
-
 // Login Struct
 struct login{
     char username[20];
@@ -27,20 +20,18 @@ struct login{
     struct login *next;
 };
 
+// Date Struct
+struct date{
+    int month;
+    int date;
+    int year;
+};
+
 // Address Struct
 struct address{
     char street[40];
     char city[30];
     char country[30];
-};
-
-// Report Struct
-struct report{
-    char departmentName[20];
-    int numberOfEmployees;
-    int totalSalary;
-    int totalBonus;
-    int financialOutlay;
 };
 
 // Employee Struct
@@ -54,6 +45,15 @@ struct employee{
     struct date date;
     int salary;
     struct employee *next;
+};
+
+// Report Struct
+struct report{
+    char departmentName[20];
+    int numberOfEmployees;
+    int totalSalary;
+    int totalBonus;
+    int financialOutlay;
 };
 
 // Function Declarations

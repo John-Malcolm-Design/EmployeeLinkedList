@@ -1,0 +1,26 @@
+REPORT DOCUMENT
+
+Department Name: IT
+Number of Employees: 2
+Total Salary: 161000
+Total Bonuses: 5520
+Total Financial Outlay: 166520
+
+Department Name: Sales
+Number of Employees: 3
+Total Salary: 245000
+Total Bonuses: 9750
+Total Financial Outlay: 254750
+
+Department Name: Legal
+Number of Employees: 2
+Total Salary: 84000
+Total Bonuses: 3140
+Total Financial Outlay: 87140
+
+Department Name: HR
+Number of Employees: 2
+Total Salary: 108444
+Total Bonuses: 4337
+Total Financial Outlay: 112781
+

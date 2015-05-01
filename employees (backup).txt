@@ -1,8 +1,0 @@
-1 John Anderson hi@johnmalcolmdesign.com 132_Ros_Caoin_Roscam Galway Ireland IT 20 1 1993 69000
-2 Charles Mahony charliebai23@gmail.com 13_Newcastle_Rd Galway Ireland Sales 12 4 1987 62000
-3 Sean McGrath seanemac@yahoo.com 12_Sea_View Oranmore Ireland Sales 10 1 1991 63000
-4 Jimmy Clapton jimmytheclap@gmail.com 213_Alverston_St Barna Ireland HR 3 8 1977 54000
-5 Mark Manson markymark@revenue.gov 8_Falcon_Avenue_Key_St Tuam Ireland Legal 14 9 1976 53000
-6 Mitch Flanagan richymitch@btinternet.com 3_Sea_Drive_Salt_Hill Galway Ireland Legal 19 2 1992 31000
-7 Megan McGuinness hi@johnmalcolmdesign.com 32_Millview_Crescent Ballina Ireland Sales 20 1 1993 120000
-8 Sarah Carter sarahcarter@btinternet.co.uk 3_Hawthorn_St Clarinbridge Ireland IT 22 11 1992 92000

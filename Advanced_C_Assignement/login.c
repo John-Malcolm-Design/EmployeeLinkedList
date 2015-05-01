@@ -23,8 +23,10 @@ void login(){
     char username[20];
     char password[20];
     
+    // Gets username and password and loops until end of file
     while (fscanf(login, "%s", username) != EOF) {
         
+        // Gets password
         fscanf(login, "%s", password);
         
         // Creates a pointer to a new node
@@ -61,17 +63,29 @@ void login(){
         tempLogin->next = newNodeLogin;
     }
     
+    // Variables for user input
     char usernameChoice[20];
     char passwordChoice[20];
+    int loginIncorrect;
     
     do {
+        // If the login is incorrect displays message
+        if (loginIncorrect == 1) {
+            printf("\nIncorrect Credentials!");
+        }
+        
+        // Prompts user for username and password
         printf("\nEnter Username: ");
         scanf("%s", usernameChoice);
-        
         printf("Enter Password: ");
         scanf("%s", passwordChoice);
         
+        // Sets login to incorrect
+        loginIncorrect = 1;
+        
+    // Runs until the username and password match a node in the login LinkedList
     } while (searchUser(LoginHead, usernameChoice, passwordChoice) != 1);
     
+    // Close file
     fclose(login);
 }

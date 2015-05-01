@@ -8,7 +8,7 @@
 
 #include "customHeader.h"
 
-// Search list and return node
+// Search linkedlist for user and return 1 if found or 0 if not
 int searchUser(struct login *head, char* username, char* password) {
     
     // Creates a pointer to a new temporary node

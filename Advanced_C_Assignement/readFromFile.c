@@ -8,6 +8,7 @@
 
 #include "customHeader.h"
 
+// Read Employees from file
 void readFromFile(struct employee* head){
     
     // Variables for reading from file
@@ -88,5 +89,6 @@ void readFromFile(struct employee* head){
         temp->next = newNode;
     }
     
+    // Closes file
     fclose(fp);
 }
