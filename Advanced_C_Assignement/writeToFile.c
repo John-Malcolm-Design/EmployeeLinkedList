@@ -14,7 +14,7 @@ void writeToFile(struct employee* head){
     FILE *fp;
     
     // Open File for Reading & Writing
-    fp = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/employees.txt", "w+");
+    fp = fopen("employees.txt", "w+");
     
     // Creates a pointer to a new node
     struct employee *temp;

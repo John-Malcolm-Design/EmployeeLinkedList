@@ -14,7 +14,7 @@ void login(){
     FILE *login;
     
     // Open File for Reading & Writing
-    login = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/login.txt", "r+");
+    login = fopen("login.txt", "r+");
     
     // Node initialization & Memory allocation
     struct login *LoginHead = NULL;

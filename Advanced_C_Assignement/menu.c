@@ -201,7 +201,7 @@ void menu(struct employee* head){
                 FILE *fpReportWrite;
                 
                 // Open File for Writing
-                fpReportWrite = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/report.txt", "w+");
+                fpReportWrite = fopen("report.txt", "w+");
                 
                 // Writes heading to report file
                 fprintf(fpReportWrite, "REPORT DOCUMENT\n\n");

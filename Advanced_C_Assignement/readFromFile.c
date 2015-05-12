@@ -30,7 +30,7 @@ void readFromFile(struct employee* head){
     FILE *fp;
     
     // Open File for Reading & Writing
-    fp = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/employees.txt", "r+");
+    fp = fopen("employees.txt", "r+");
     
     // Reads in 'line by line' until we reach the end of the file (EOF)
     while (fscanf(fp, "%d", &id) != EOF) {

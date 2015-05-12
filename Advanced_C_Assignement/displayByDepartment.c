@@ -78,7 +78,7 @@ struct report* displayByDepartment(struct employee* head, char departmentParam[2
         FILE *fpReport;
         
         // Open File for appending
-        fpReport = fopen("/Users/johnmalcolm/Documents/C : C++/Advanced_C_Assignement/report.txt", "a");
+        fpReport = fopen("report.txt", "a");
 
         // Appends report for each department to file
         fprintf(fpReport, "Department Name: %s\n", reportTemp->departmentName);
